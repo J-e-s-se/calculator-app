@@ -29,7 +29,6 @@ reset.addEventListener('click', ()=> {
     amount.value = ""
     people.value = ""
     custom.value = ""
-    // percentage = 0
 
     if (!err.classList.contains("hide")) {
       err.classList.add("hide")
@@ -38,10 +37,7 @@ reset.addEventListener('click', ()=> {
     compute_display()
   
     reset.classList.add('op')
-    // reset tip-box
     resetState()
-  
-    // reset custom_input
     hide_custom_input()
     resetval = true
   }
@@ -103,7 +99,7 @@ button.forEach(item => {
       hide_custom_input()
     }
   })
-// This function resets the state
+
 function resetState() {
   button.forEach(item => {
     if (item.classList.contains('bc1')) {
@@ -115,10 +111,6 @@ function resetState() {
 
 // Function to handle change in form content
 function formChanged(element) {
-  
-  console.log("percentage: ", custom.value)
-  console.log("amount: ", amount.value)
-  console.log("people: ", people.value)
   if (element.name == "custom_amount") {
     percentage = custom.value
   }
@@ -170,8 +162,6 @@ function display_tip_total() {
 
   var amtstring = "$" + tip_amount.toFixed(2).toString()
   var ttlstring = "$" + (total.toFixed(2)).toString()
-  console.log("amtstring:", amtstring)
-  console.log("ttlstring:", ttlstring)
   document.getElementById("tip-amt").innerHTML = amtstring
   document.getElementById("ttl").innerHTML = ttlstring
 }
@@ -183,7 +173,7 @@ function compute_display() {
 
 function unReset() {
   if (reset.classList.contains('op')) {
-    reset.classList.remove('op') // unreset
+    reset.classList.remove('op')
   }
   resetval = false
 }
