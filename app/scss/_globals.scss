@@ -90,6 +90,11 @@ h2, label {
     }
 }
 
+h3 {
+    font-size: $font-vsm;
+    color: $darkGrayishCyan2;
+}
+
 .char {
     font-size: $font-lg;
     &--2 {
