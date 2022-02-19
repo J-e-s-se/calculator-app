@@ -1,0 +1,105 @@
+.bill_entry {
+  padding: 33px 31px 30px 31px;
+  // @include breakpoint-up(medium) {
+  //   width: 51%;
+  // }
+  @include breakpoint-up(large) {
+    padding: 48px;
+    // width: 476px;
+    width: 51%;
+  }
+}
+
+.amount_form {
+  display: flex;
+  padding: 0 16px 0 16px;
+  border-radius: 6px;
+  background-color: $lightGrayishCyan2;
+  height: 48px;
+}
+.amount_box {
+  background-color: transparent;
+  height: 48px;
+  width: 100%;
+}
+
+
+.tip_field {
+  margin-top: 41px;
+}
+.tip_boxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 16px;
+  margin-bottom: 36px;
+
+  @include breakpoint-up(large) {
+    grid-template-columns: repeat(3, 1fr);
+    row: 16px;
+    column-gap: 14px;
+    margin-top: 19px;
+    margin-bottom: 44px;
+  }
+}
+.tip_box {
+  height: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $veryDarkCyan;
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .jc2 {
+    justify-content: flex-end;
+    padding-right: 19px;
+  }
+
+  @include breakpoint-up(large){
+    height: 48px;
+  }
+}
+.custom_box {
+  background-color: $lightGrayishCyan2;
+  color: $darkGrayishCyan1;
+  padding-right: 16px;
+}
+
+.bc1 {
+  // First exception
+  background-color: $strongCyan;
+  color: $veryDarkCyan;
+}
+
+.bc2 {
+    background-color: $lightGrayishCyan2;
+    color: $darkGrayishCyan1;
+}
+
+.bc3 {
+  background-color: $lightGrayishCyan1;
+  color: $veryDarkCyan;
+}
+
+
+.customHover {
+  // background-color: $lightGrayishCyan2;
+  // color: $veryDarkCyan;
+  border: 2px solid $strongCyan;
+}
+
+.peopleHoverError {
+  border: 2px solid $errorred;
+}
+.hide {
+  display: none;
+}
+
+.smsp {
+  @include breakpoint-up(large) {
+    margin-bottom: 8px;
+  }
+}

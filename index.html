@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" type='text/css' href="app/dist/css/style.css">
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+
+
+  <body>
+    <h1 class="heading char">SPLI<br>TTER</h1>
+    <div class="billboard">
+
+
+      <div class="bill_entry">
+
+        <div class="amount_field">
+
+          <h2 class="smsp">Bill</h2>
+          <div class="amount_form flex--ai-c flex--jc-sb">
+            <img for="amount" src="images/icon-dollar.svg">
+            <input name="amount" class="amount_box char char--2" placeholder=0 oninput="formChanged(this)" type="number">
+          </div>
+
+        </div>
+
+        <div class="tip_field">
+          <h2>Select Tip %</h2>
+          <div class="tip_boxes char--3">
+            <div class="tip_box tip-res" id="5" onclick="tipclicked(this)">
+              <h1>5%</h1>
+            </div>
+            <div class="tip_box tip-res" id="10" onclick="tipclicked(this)">
+              <h1>10%</h1>
+            </div>
+            <div class="tip_box tip-res" id="15" onclick="tipclicked(this)">
+              <h1>15%</h1>
+            </div>
+            <div class="tip_box tip-res" id="25" onclick="tipclicked(this)">
+              <h1>25%</h1>
+            </div>
+            <div class="tip_box tip-res" id="50" onclick="tipclicked(this)">
+              <h1>50%</h1>
+            </div>
+            <div class="tip_box cus-hov bc2 jc2">
+              <h1>Custom</h1>
+              <input name="custom_amount" class="hide custom_box char char--2" placeholder=0 oninput="formChanged(this)" type="number">
+            </div>
+            <!-- <input type="number" name="custom_amount" id="cib" class="tip_box char char--2" placeholder="Custom" oninput="formChanged(this)"> -->
+          </div>
+        </div>
+        <div class="people_field">
+          <div class="flex fit">
+            <h2 class="smsp">Number of People</h2>
+            <h2 class='error hide'>Can't be zero</h2>
+          </div>
+          <div id = "ppl" class="amount_form flex--ai-c flex--jc-sb">
+            <img src="images/icon-person.svg">
+            <input name="people" class="amount_box char char--2" placeholder=0 type="number" oninput="formChanged(this)">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="bill_calculator">
+
+
+        <div class="computed_values flex--jc-sb flex--ai-c">
+
+          <div class="property">
+            <h2>Tip Amount</h2>
+            <h5>/ person</h5>
+          </div>
+          <div class="value">
+            <h1 id="tip-amt">$0.00</h1>
+          </div>
+
+        </div>
+
+
+        <div class="computed_values flex--jc-sb flex--ai-c">
+
+          <div class="property">
+            <h2>Total</h2>
+            <h5>/ person</h5>
+          </div>
+          <div class="value">
+            <h1 class="largeout" id="ttl">$0.00</h1>
+          </div>
+
+        </div>
+
+
+        <div class="op reset-button bc1">
+          <h1 >RESET</h1>
+        </div>
+      </div>
+    </div>
+    <script src="/app/js/script.js"></script>
+  </body>
+
+</html>

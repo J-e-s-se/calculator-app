@@ -1,0 +1,153 @@
+html {
+    font-family: 'Space Mono', monospace;
+    box-sizing: border-box;
+}
+
+
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $lightGrayishCyan1;
+    line-height: 1.3;
+}
+
+.billboard {
+    background-color: $white;
+    border-radius: 25px 25px 0px 0px;
+    width: 100%;
+    height: 100%;
+
+
+    @include breakpoint-up(large) {
+        display: flex;
+        height: 483px;
+        min-width: 768px;
+        max-width: 920px;
+        width: 64%;
+        border-radius: 25px;
+    }
+    @media (min-width: 481px) and (max-width: 1024px) {
+        width: 95%;
+    }
+}
+
+.heading {
+    margin-top: 42px;
+    margin-bottom: 33px;
+    color: $darkGrayishCyan1;
+    letter-spacing: 9px;
+    text-align: center;
+
+    @include breakpoint-up(large) {
+        margin-top: 70px;
+        @media (min-height: 900px) {
+            margin-bottom: 80px;
+        }
+
+        @media (max-height: 1100px) {
+            margin-top: 160px;
+        }
+
+        @media (max-height: 850px) {
+            margin-top: 105px;
+        }
+
+        @media (max-height: 770px) {
+            margin-top: 80px;
+        }
+        @media (max-height: 740px) {
+            margin-top: 50px;   
+        }
+        @media (max-height: 830px) {
+            margin-top: 110px;
+        }
+        @media (max-height: 800px) {
+            margin-top: 40px;
+        }
+
+        @media (max-height: 700px) {
+            margin-top: 30px;
+        }
+    }
+}
+h1 {
+    font-size: $font-lg;
+}
+h2, label {
+    color: $darkGrayishCyan2;
+    font-size: 14.7px;
+
+    @include breakpoint-up(large) {
+        font-size: 15px;
+    }
+}
+
+.char {
+    font-size: $font-lg;
+    &--2 {
+        color: $veryDarkCyan;
+    }
+    &--3 {
+        color: $white;
+    }
+
+}
+
+.flex {
+    display: flex;
+    &--jc-sb {
+        justify-content: space-between;
+    }
+
+    &--jc-c {
+        justify-content: center;
+    }
+
+    &--ai-c {
+        align-items: center;
+    }
+}
+
+.fit {
+    justify-content: space-between;
+}
+
+.error {
+    color: $errorred;
+}
+
+@mixin james {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input {
+    border: 0;
+    outline: 0;
+    text-align: end;
+    font-family: inherit;
+    font-weight: bold;
+    margin: 0;
+    width: 100%;
+
+    // to remove all outlines
+    &:focus {
+        outline: none ! important; 
+    }
+    // remove arrow on number input
+    &::-webkit-inner-spin-button, &::-webkit-outer-spin-button{      
+        @include james;
+    }
+
+    &::placeholder {
+        color: $darkGrayishCyan2;
+    }
+}

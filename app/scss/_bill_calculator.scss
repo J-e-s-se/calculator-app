@@ -1,0 +1,66 @@
+.bill_calculator {
+  padding: 30px 23px 23px 23px;
+  margin: 0px 25px 50px 25px;
+  border-radius: 15px;
+  height: 256px;
+  background-color: $veryDarkCyan;
+
+  @include breakpoint-up(large) {
+    margin-top: 32px;
+    margin-right: 33px;
+    height: 418px;
+    width: 44%;
+  }
+  .computed_values {
+    display: flex;
+
+    height: 50px;
+    //   background-color: $white;
+    margin-bottom: 20px;
+
+    h1 {
+      color: $strongCyan;
+      font-size: $font-lg2;
+
+      @include breakpoint-up(large) {
+        font-size: $font-xlg;
+      }
+    }
+  }
+
+  h2 {
+    color: $white;
+  }
+
+  h5 {
+    font-size: $font-vsm;
+    color: $darkGrayishCyan2;
+  }
+}
+
+.reset-button {
+  display: flex;
+  height: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 38px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include breakpoint-up(large) {
+    margin-top: 180px;
+    height: 48px;
+    width: 80%;
+  }
+}
+
+.reset-a {
+  background-color: $lightGrayishCyan1;
+}
+
+.op {
+  opacity: 0.1;
+}

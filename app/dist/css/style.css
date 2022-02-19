@@ -1,0 +1,414 @@
+html {
+  font-family: 'Space Mono', monospace;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #c5e4e7;
+  line-height: 1.3;
+}
+
+.billboard {
+  background-color: white;
+  border-radius: 25px 25px 0px 0px;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 64em) {
+  .billboard {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 483px;
+    min-width: 768px;
+    max-width: 920px;
+    width: 64%;
+    border-radius: 25px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .billboard {
+    width: 95%;
+  }
+}
+
+.heading {
+  margin-top: 42px;
+  margin-bottom: 33px;
+  color: #5e7a7d;
+  letter-spacing: 9px;
+  text-align: center;
+}
+
+@media (min-width: 64em) {
+  .heading {
+    margin-top: 70px;
+  }
+}
+
+@media (min-width: 64em) and (min-height: 900px) {
+  .heading {
+    margin-bottom: 80px;
+  }
+}
+
+@media (min-width: 64em) and (max-height: 1100px) {
+  .heading {
+    margin-top: 160px;
+  }
+}
+
+@media (min-width: 64em) and (max-height: 850px) {
+  .heading {
+    margin-top: 105px;
+  }
+}
+
+@media (min-width: 64em) and (max-height: 770px) {
+  .heading {
+    margin-top: 80px;
+  }
+}
+
+@media (min-width: 64em) and (max-height: 740px) {
+  .heading {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 64em) and (max-height: 830px) {
+  .heading {
+    margin-top: 110px;
+  }
+}
+
+@media (min-width: 64em) and (max-height: 800px) {
+  .heading {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 64em) and (max-height: 700px) {
+  .heading {
+    margin-top: 30px;
+  }
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2, label {
+  color: #7f9c9f;
+  font-size: 14.7px;
+}
+
+@media (min-width: 64em) {
+  h2, label {
+    font-size: 15px;
+  }
+}
+
+.char {
+  font-size: 24px;
+}
+
+.char--2 {
+  color: #00494d;
+}
+
+.char--3 {
+  color: white;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex--jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex--jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex--ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fit {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.error {
+  color: #b14b5a;
+}
+
+input {
+  border: 0;
+  outline: 0;
+  text-align: end;
+  font-family: inherit;
+  font-weight: bold;
+  margin: 0;
+  width: 100%;
+}
+
+input:focus {
+  outline: none !important;
+}
+
+input::-webkit-inner-spin-button, input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input::-webkit-input-placeholder {
+  color: #7f9c9f;
+}
+
+input:-ms-input-placeholder {
+  color: #7f9c9f;
+}
+
+input::-ms-input-placeholder {
+  color: #7f9c9f;
+}
+
+input::placeholder {
+  color: #7f9c9f;
+}
+
+.bill_entry {
+  padding: 33px 31px 30px 31px;
+}
+
+@media (min-width: 64em) {
+  .bill_entry {
+    padding: 48px;
+    width: 51%;
+  }
+}
+
+.amount_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 16px 0 16px;
+  border-radius: 6px;
+  background-color: #f4fafa;
+  height: 48px;
+}
+
+.amount_box {
+  background-color: transparent;
+  height: 48px;
+  width: 100%;
+}
+
+.tip_field {
+  margin-top: 41px;
+}
+
+.tip_boxes {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 16px;
+  margin-bottom: 36px;
+}
+
+@media (min-width: 64em) {
+  .tip_boxes {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    row: 16px;
+    -webkit-column-gap: 14px;
+            column-gap: 14px;
+    margin-top: 19px;
+    margin-bottom: 44px;
+  }
+}
+
+.tip_box {
+  height: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #00494d;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tip_box .jc2 {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 19px;
+}
+
+@media (min-width: 64em) {
+  .tip_box {
+    height: 48px;
+  }
+}
+
+.custom_box {
+  background-color: #f4fafa;
+  color: #5e7a7d;
+  padding-right: 16px;
+}
+
+.bc1 {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+.bc2 {
+  background-color: #f4fafa;
+  color: #5e7a7d;
+}
+
+.bc3 {
+  background-color: #c5e4e7;
+  color: #00494d;
+}
+
+.customHover {
+  border: 2px solid #26c0ab;
+}
+
+.peopleHoverError {
+  border: 2px solid #b14b5a;
+}
+
+.hide {
+  display: none;
+}
+
+@media (min-width: 64em) {
+  .smsp {
+    margin-bottom: 8px;
+  }
+}
+
+.bill_calculator {
+  padding: 30px 23px 23px 23px;
+  margin: 0px 25px 50px 25px;
+  border-radius: 15px;
+  height: 256px;
+  background-color: #00494d;
+}
+
+@media (min-width: 64em) {
+  .bill_calculator {
+    margin-top: 32px;
+    margin-right: 33px;
+    height: 418px;
+    width: 44%;
+  }
+}
+
+.bill_calculator .computed_values {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.bill_calculator .computed_values h1 {
+  color: #26c0ab;
+  font-size: 30.6px;
+}
+
+@media (min-width: 64em) {
+  .bill_calculator .computed_values h1 {
+    font-size: 49px;
+  }
+}
+
+.bill_calculator h2 {
+  color: white;
+}
+
+.bill_calculator h5 {
+  font-size: 9.4px;
+  color: #7f9c9f;
+}
+
+.reset-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 38px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 64em) {
+  .reset-button {
+    margin-top: 180px;
+    height: 48px;
+    width: 80%;
+  }
+}
+
+.reset-a {
+  background-color: #c5e4e7;
+}
+
+.op {
+  opacity: 0.1;
+}
+/*# sourceMappingURL=style.css.map */
